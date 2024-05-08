@@ -1,0 +1,11 @@
+dist
+coverage
+node_modules
+.yarn
+.pnp.cjs
+.pnp.loager.mjs
+!.storybook
+
+.next
+.vscode/extensions.json
+commitlint.config.json

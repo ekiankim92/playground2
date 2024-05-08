@@ -1,0 +1,10 @@
+{
+    "arrowParens": "always",
+    "endOfLine": "lf",
+    "printWidth": 120,
+    "jsxSingleQuote": true,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "tabWidth": 2,
+    "trailingComma": "all"
+  }
