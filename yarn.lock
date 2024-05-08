@@ -295,6 +295,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/next@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@types/next@npm:9.0.0"
+  dependencies:
+    next: "npm:*"
+  checksum: 10c0/2148aadba745e6f094d33e483875656dece95e4049d7d99ce0ca0678035d1d48e73d6e2cba45e2b5fb0762bfd7b48587139d7ecf464876fb4fde9ff06cc249b8
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^20":
   version: 20.12.8
   resolution: "@types/node@npm:20.12.8"
@@ -530,23 +539,6 @@ __metadata:
   checksum: 10c0/8209c937cb39119f44eb63cf90c0b73e7c754209a6411c707be08e50e29ee81356dca1a848a405c8bdeebfe2f5e4f831ad310ae1689eeef65e7445c090c6657d
   languageName: node
   linkType: hard
-
-"RTKProject@workspace:apps/RTKProject":
-  version: 0.0.0-use.local
-  resolution: "RTKProject@workspace:apps/RTKProject"
-  dependencies:
-    "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
-    "@types/react-dom": "npm:^18"
-    axios: "npm:^1.6.8"
-    eslint: "npm:^8"
-    eslint-config-next: "npm:14.2.3"
-    next: "npm:14.2.3"
-    react: "npm:^18"
-    react-dom: "npm:^18"
-    typescript: "npm:^5"
-  languageName: unknown
-  linkType: soft
 
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
@@ -2560,7 +2552,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.2.3":
+"next@npm:*, next@npm:14.2.3":
   version: 14.2.3
   resolution: "next@npm:14.2.3"
   dependencies:
@@ -3052,6 +3044,24 @@ __metadata:
   checksum: 10c0/9cb7757acb489bd83757ba1a274ab545eafd75598a9d817e0c3f8b164238dd90eba50d6b848bd4dcc5f3040912e882dc7ba71653e35af660d77b25c381d402e8
   languageName: node
   linkType: hard
+
+"rtkproject@workspace:apps/rtkproject":
+  version: 0.0.0-use.local
+  resolution: "rtkproject@workspace:apps/rtkproject"
+  dependencies:
+    "@types/next": "npm:^9.0.0"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    axios: "npm:^1.6.8"
+    eslint: "npm:^8"
+    eslint-config-next: "npm:14.2.3"
+    next: "npm:14.2.3"
+    react: "npm:^18"
+    react-dom: "npm:^18"
+    typescript: "npm:^5"
+  languageName: unknown
+  linkType: soft
 
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
