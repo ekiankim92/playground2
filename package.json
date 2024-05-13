@@ -2,7 +2,8 @@
   "name": "playground2_monorepo",
   "packageManager": "yarn@4.2.1",
   "workspaces": [
-    "apps/rtkproject"
+    "apps/rtkproject",
+    "apps/ui"
   ],
   "devDependencies": {
     "@eslint/js": "^9.2.0",
