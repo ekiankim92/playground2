@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 600px;
+  height: 200px;
+  border: 1px solid #000;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.box1 {
+  width: 160px;
+  height: 40px;
+  border: 1px solid green;
+  order: 3;
+}
+
+.box2 {
+  width: 160px;
+  height: 40px;
+  border: 1px solid green;
+  order: 2;
+}
+
+.box3 {
+  width: 160px;
+  height: 40px;
+  border: 1px solid green;
+  order: 1;
+}
+
+.box4 {
+  width: 160px;
+  height: 40px;
+  border: 1px solid green;
+  order: 5;
+}
+
+.box5 {
+  width: 160px;
+  height: 40px;
+  border: 1px solid blue;
+  order: 4;
+}
+
+.textarea {
+  width: 240px;
+  height: 100px;
+  /* text-indent: 20px; */
+  text-transform: capitalize;
+
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.overflow {
+  width: 200px;
+  height: 40px;
+  border: 3px solid #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

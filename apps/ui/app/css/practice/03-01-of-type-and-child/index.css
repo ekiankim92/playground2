@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.container *:first-child {
+  background: red;
+}
+
+/* .container p:first-of-type {
+  background: blue;
+} */
+
+.container p:last-of-type {
+  background: yellow;
+}
+
+.container p:nth-of-type(4) {
+  background: green;
+}
+
+.second-container {
+  display: flex;
+  background: lightblue;
+}
+
+.second-container div:nth-of-type(2) {
+  background: red;
+}
+
+.second-container div:nth-of-type(3) {
+  background: green;
+}
+
+.second-container div:nth-of-type(4) {
+  /* margin-right: 10px; */
+  gap: 40px;
+  background: blue;
+}

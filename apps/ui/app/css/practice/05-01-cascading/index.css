@@ -1,0 +1,18 @@
+* {
+  background: yellow;
+  width: 100vw;
+}
+
+div {
+  background: aqua;
+}
+
+.text-class {
+  background: blue;
+}
+
+#text-id {
+  backgroundg: red;
+}
+
+/* Cascading 순서 : id 선택자, class 선택자, 태크 선택자, 전체 선택자

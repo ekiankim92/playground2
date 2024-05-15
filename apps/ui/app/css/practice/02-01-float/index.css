@@ -1,0 +1,19 @@
+.container {
+  width: 800px;
+  height: 600px;
+  border: 1px solid #000;
+}
+
+.float-box {
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  background-color: lightblue;
+  float: left;
+}
+
+.content {
+  color: blue;
+  word-break: break-all;
+  word-break: break-word;
+}
