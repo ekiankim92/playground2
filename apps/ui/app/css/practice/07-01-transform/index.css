@@ -1,0 +1,51 @@
+.container {
+  width: 500px;
+  height: 320px;
+  position: relative;
+}
+
+.base {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  background: #ddd;
+}
+
+.target {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 255, 0.8);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target span {
+  color: #fff;
+}
+
+/* 좌표 옮기기 */
+.target1 {
+  transform: translate(50%, 20px);
+}
+
+/* 늘리기 */
+.target2 {
+  transform: scale(0.8, 1.2);
+}
+
+/* 기울리기 */
+.target3 {
+  transform: skew(30deg, 20deg);
+}
+
+/* 돌리기 */
+.target4 {
+  transform: rotate(45deg);
+}
