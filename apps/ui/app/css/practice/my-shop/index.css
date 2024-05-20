@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainBanner {
+  height: 280px;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainBanner .text {
+  font-size: 48px;
+}
+
+.container {
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1320px;
+  background: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sidebar {
+  background: yellow;
+  width: 170px;
+}
+
+.itemWrap {
+  background: green;
+  width: calc(100% - 170px);
+}

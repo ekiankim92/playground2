@@ -1,0 +1,36 @@
+.container {
+  background: red;
+  padding: 30px;
+}
+
+.contents {
+  color: white;
+}
+
+.contents:after {
+  content: 'This is PC';
+}
+
+/* PC 기본 설정 */
+
+@media screen and (max-width: 767px) {
+  /* mobile */
+  .container {
+    background: blue;
+  }
+
+  .contents:after {
+    content: 'This is Mobile';
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* tablet */
+  .container {
+    background: green;
+  }
+
+  .contents:after {
+    content: 'This is Tablet';
+  }
+}
