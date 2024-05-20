@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 700px;
+  border: 1px solid #000;
+  background-color: lightblue;
+
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.container span {
+  background-color: lightyellow;
+}
+
+.item1 {
+  border: 1px solid #000;
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
+}
+
+.item2 {
+  border: 1px solid #000;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.item3 {
+  border: 1px solid #000;
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.item4 {
+  border: 1px solid #000;
+  grid-row: 1 / span 2;
+  grid-column: 4 / span 1;
+}
+
+.item5 {
+  border: 1px solid #000;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.item6 {
+  border: 1px solid #000;
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.item7 {
+  border: 1px solid #000;
+  grid-row: 3 / span 2;
+  grid-column: 2 / span 3;
+}
+
+.item8 {
+  border: 1px solid #000;
+  grid-row: 5 / span 2;
+  grid-column: 1 / span 3;
+}
+
+.item9 {
+  border: 1px solid #000;
+  grid-row: 5 / span 1;
+  grid-column: 4 / span 1;
+}
+
+.item10 {
+  border: 1px solid #000;
+  grid-row: 6 / span 1;
+  grid-column: 4 / span;
+}
+
+.item11 {
+  border: 1px solid #000;
+  grid-row: 7 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.item12 {
+  border: 1px solid #000;
+  grid-row: 7 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.item13 {
+  border: 1px solid #000;
+  grid-row: 7 / span 1;
+  grid-column: 3 / span 1;
+}
+
+.item14 {
+  border: 1px solid #000;
+  grid-row: 7 / span 1;
+  grid-column: 4 / span 1;
+}
+
+.item15 {
+  border: 1px solid #000;
+  grid-row: 8 / span 1;
+  grid-column: 1 / span 4;
+}
+
+.item16 {
+  border: 1px solid #000;
+  grid-row: 9 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.item17 {
+  border: 1px solid #000;
+  grid-row: 9 / span 1;
+  grid-column: 2 / span 2;
+}
+
+.item18 {
+  border: 1px solid #000;
+  grid-row: 9 / span 1;
+  grid-column: 4 / span 1;
+}
+
+.item19 {
+  border: 1px solid #000;
+  grid-row: 10 / span 1;
+  grid-column: 1 / span 2;
+}
+
+.item20 {
+  border: 1px solid #000;
+  grid-row: 10 / span 1;
+  grid-column: 3 / span 2;
+}
