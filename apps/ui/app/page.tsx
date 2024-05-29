@@ -1,10 +1,9 @@
 import styles from './page.module.css';
-import Header from './components/layout/header/Header';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Header />
+      <div>THIS IS MAIN!!!</div>
     </main>
   );
 }

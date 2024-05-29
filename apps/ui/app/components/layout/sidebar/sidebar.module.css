@@ -1,0 +1,18 @@
+.section {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 323px;
+
+  max-width: calc(100% - 323px);
+  height: 100%;
+  background: #060607;
+}
+
+.sectionWrapper {
+}
+
+.menus {
+  color: #fff;
+  background: #060607;
+}
