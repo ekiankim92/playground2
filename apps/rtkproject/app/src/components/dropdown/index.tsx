@@ -1,3 +1,5 @@
+import css from 'styled-jsx/css';
+
 const Dropdown = () => {
   const options = [
     { key: 'A', name: 'A' },
@@ -14,3 +16,8 @@ const Dropdown = () => {
 };
 
 export { Dropdown };
+
+const Wrapper = css`
+  width: 240px;
+  height: 120px;
+`;
