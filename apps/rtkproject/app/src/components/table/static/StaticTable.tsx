@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { MaterialReactTable, useMaterialReactTable, type MRT_ColumnDef } from 'material-react-table';
+import './styles.css';
 
 type Person = {
   name: {
@@ -96,8 +97,8 @@ const StaticTable = ({ enableTopToolbar = true }) => {
   //   const topToolbar = {};
 
   const table = useMaterialReactTable({
-    columns,
-    data,
+    columns, // header 컬럼으로 들어가는 데이터
+    data: Array.from({ length: 1 }, () => data).flat(), // 실제 들어가는 데이터
     enableColumnResizing: true, // 컬럼 사이 간격 조절
     enableTopToolbar: true, // 테이블 위 옵션들
     renderTopToolbar: () => {
@@ -105,7 +106,7 @@ const StaticTable = ({ enableTopToolbar = true }) => {
     },
     enableRowNumbers: true, //
     enableRowSelection: true,
-    enableSorting: false, // 컬럼 안에서 sorting
+    enableSorting: true, // 컬럼 안에서 sorting
     enablePagination: false,
     enableColumnActions: false,
     muiTableHeadCellProps: ({ column }) =>
@@ -116,6 +117,26 @@ const StaticTable = ({ enableTopToolbar = true }) => {
             sx: { textAlign: 'center' },
           }
         : {},
+    enableMultiSort: true,
+
+    // 테이블 전체 스타일링
+    // muiTablePaperProps: {
+    //   sx: {
+    //     background: 'blue',
+    //     boxShadow: 'none',
+    //     borderRadius: '10px',
+    //     padding: '20px',
+    //   },
+    // },
+
+    // muiTableProps: {
+    //   sx: {
+    //     '& .MuiTableHead-root': {
+    //       opacity: 1,
+    //       background: 'red',
+    //     },
+    //   },
+    // },
   });
 
   return <MaterialReactTable table={table} />;

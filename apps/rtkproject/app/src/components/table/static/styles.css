@@ -1,0 +1,124 @@
+.MuiBox-root {
+  height: 100%;
+}
+
+.MuiPopover-root {
+  position: unset;
+}
+
+.MuiPopover-paper {
+}
+
+.MuiPaper-root {
+  height: 100%;
+  padding: 14px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  background: transparent !important;
+}
+
+.MuiTableContainer-root {
+  height: 100%;
+  border: 1px solid lightgray;
+  border-bottom: none;
+}
+
+.MuiTable-root {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.MuiTable-root .MuiTableCell-root .MuiTableCell-resizable .MuiTableCell-resizeHandle {
+  background: green;
+  color: green;
+  border: 2px solid green;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 6px;
+  /* cursor: col-resize; */
+  z-index: 1px;
+}
+
+.MuiTableRow-root {
+  background: lightgray;
+  /* border-bottom: 1px solid gray; */
+}
+
+.MuiCheckbox-root {
+  width: 32px;
+  height: 30px;
+  background: red;
+}
+
+.MuiIconButton-root {
+  width: 32px;
+  height: 30px;
+  font-size: 160px;
+  color: orange;
+}
+
+.MuiButton-root {
+  width: 20px;
+  height: 20px;
+}
+
+.MuiTableSortLabel-root.Mui-active {
+  margin-left: 2px;
+  width: 20px !important;
+  color: blue;
+  opacity: 1px;
+  /* background: blue; */
+}
+
+.MuiTableCell-root {
+  /* color: green; */
+  /* color */
+  /* padding: 2px; */
+  min-width: 40px;
+  min-height: 14px;
+  /* padding: 2px 0px 2px 4px; */
+  border-right: 1px solid lightgray;
+  outline: unset !important;
+}
+
+.MuiTableCell-root:last-child {
+  border-right: none;
+}
+
+.MuiTableCell-head {
+  /* background: blue; */
+}
+
+.MuiTableCell-head .Mui-TableHeadCell-ResizeHandle-wrapper {
+  padding: 0px;
+  margin: 10px;
+}
+
+.MuiTableCell-head .Mui-TableHeadCell-ResizeHandle-Wrapper .Mui-TableHeadCell-ResizeHandle-Divider {
+  display: unset;
+  /* color: red; */
+  /* width: 4px !important; */
+  /* border-width: 5px !important; */
+  color: transparent !important;
+  /* border-color: transparent !important; */
+  /* border-color: transparent; */
+  width: 1px !important;
+  border-width: 1px !important;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover td::after {
+  background: yellow;
+}
+
+.MuiTableBody-root .MuiTableRow-root.Mui-selected {
+  background: blue;
+  opacity: 1;
+}
+
+.MuiTableBody-root .MuiTableRow-root.Mui-selected td:after {
+  background: blue;
+  opacity: 1;
+}

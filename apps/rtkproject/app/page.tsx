@@ -6,8 +6,7 @@ export default function Home() {
   return (
     <>
       <div>This is the content area </div>
-      <div>Hl;asjdfl;ksjf</div>
-
+      <div>HELLO WORLD!</div>
       <StaticTable />
     </>
   );
