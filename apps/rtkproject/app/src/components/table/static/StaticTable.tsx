@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { MaterialReactTable, useMaterialReactTable, type MRT_ColumnDef } from 'material-react-table';
 import './styles.css';
 
@@ -63,6 +63,9 @@ const data: Person[] = [
 ];
 
 const StaticTable = ({ enableTopToolbar = true }) => {
+  const [rowSelection, setRowSelection] = useState({});
+  const [pagination, setPagination] = useState(0);
+
   const columns = useMemo<MRT_ColumnDef<Person>[]>(
     () => [
       {
