@@ -1,7 +1,13 @@
-export default function ContentCard() {
+import { ReactNode } from 'react';
+
+export default function ContentCard({ Content }: React.ReactNode) {
   return (
     <div>
-      <div>Content</div>
+      <Content />
     </div>
   );
 }
+
+const Content = ({ children }) => {
+  return <div>{children}</div>;
+};
