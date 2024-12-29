@@ -9,5 +9,9 @@ export default function ContentCard({ Content }: React.ReactNode) {
 }
 
 const Content = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <>
+      <div>{children}</div>
+    </>
+  );
 };
