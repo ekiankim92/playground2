@@ -1,4 +1,6 @@
-import { ReactNode } from 'react';
+type ContentCardProps = {
+  Content: React.ComponentType<{ children: React.ReactNode }>;
+};
 
 export default function ContentCard({ Content }: React.ReactNode) {
   return (
