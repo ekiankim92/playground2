@@ -1,18 +1,17 @@
 import styled from '@emotion/styled/macro';
+import { ReactNode } from 'react';
 
-type ContentCardProps = {
-  Content: React.ComponentType<{ children: React.ReactNode }>;
-};
-
-export default function ContentCard({ Content }: React.ReactNode) {
+export default function ContentCard() {
   return (
     <div>
-      <Content />
+      <Content>
+        <div>There is contents inside</div>
+      </Content>
     </div>
   );
 }
 
-const Content = ({ children }) => {
+const Content = ({ children }: { children: ReactNode }) => {
   return (
     <Wrapper>
       <div>{children}</div>
