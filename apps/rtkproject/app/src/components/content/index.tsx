@@ -13,6 +13,7 @@ export default function ContentCard() {
 
 const Content = ({ children }: { children: ReactNode }) => {
   const calculatedWidth = window.getComputedStyle;
+  console.log('calculatedWidth:', calculatedWidth);
 
   return (
     <Wrapper>
