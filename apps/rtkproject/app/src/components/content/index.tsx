@@ -5,7 +5,7 @@ export default function ContentCard() {
   return (
     <div>
       <Content>
-        <div>There is contents inside</div>
+        <Title>There is contents inside</Title>
       </Content>
     </div>
   );
@@ -24,4 +24,8 @@ const Content = ({ children }: { children: ReactNode }) => {
 
 const Wrapper = styled.div`
   width: 100%;
+`;
+
+const Title = styled.div`
+  position: relative;
 `;
