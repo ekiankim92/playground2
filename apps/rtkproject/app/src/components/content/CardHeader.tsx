@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, useRef, useState } from 'react';
 
 interface Props {
   title: string | number;
@@ -6,6 +6,21 @@ interface Props {
 }
 
 export default function CardHeader({ title, style }: Props) {
+  const childRef = useRef<HTMLDivElement>(null);
+
+  const [childFontSize, setChildFontSize] = useState(() => {
+    if (style?.fontSize) {
+      if (typeof style?.fontSize === 'number') {
+        return style.fontSize;
+      }
+
+      if (typeof style?.fontSize === 'string') {
+        return parseInt(style.fontSize) || 20;
+      }
+    }
+    return 20;
+  });
+
   return (
     <div>
       <div>{title}</div>
