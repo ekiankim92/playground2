@@ -21,6 +21,8 @@ export default function CardHeader({ title, style }: Props) {
     return 20;
   });
 
+  console.log('childFontSize:', childFontSize);
+
   return (
     <div>
       <div>{title}</div>
