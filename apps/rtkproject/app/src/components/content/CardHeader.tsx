@@ -15,10 +15,10 @@ export default function CardHeader({ title, style }: Props) {
       }
 
       if (typeof style?.fontSize === 'string') {
-        return parseInt(style.fontSize) || 20;
+        return parseInt(style.fontSize) || 16;
       }
     }
-    return 20;
+    return 16;
   });
 
   console.log('childFontSize:', childFontSize);
