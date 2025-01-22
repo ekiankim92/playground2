@@ -1,4 +1,4 @@
-import { CSSProperties, useRef, useState } from 'react';
+import { CSSProperties, useLayoutEffect, useRef, useState } from 'react';
 
 interface Props {
   title: string | number;
@@ -20,6 +20,14 @@ export default function CardHeader({ title, style }: Props) {
     }
     return 16;
   });
+
+  useLayoutEffect(() => {
+    if (childRef.current) {
+      const computedStyle = window.getComputedStyle(childRef.current);
+      const fontSize = parseInt(computedStyle.fontSize);
+      setChildFontSize(fontSize);
+    }
+  }, [title]);
 
   console.log('childFontSize:', childFontSize);
 
