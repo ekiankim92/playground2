@@ -49,6 +49,17 @@ export default function CardHeader({ title, style }: Props) {
     return `translate(${transformX}%, ${transformY}%)`;
   };
 
+  const calculatePadding = (size: number) => {
+    // 기준값 설정
+    const BASE_FONT_SIZE = 20;
+    const BASE_PADDING = 10;
+
+    const RATIO = 0.5; // padding = fontSize * 0.5
+
+    const padding = size * RATIO;
+    return `${Math.round(padding)}px`;
+  };
+
   return (
     <div ref={childRef}>
       <div>{title}</div>
