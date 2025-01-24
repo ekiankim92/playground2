@@ -31,6 +31,24 @@ export default function CardHeader({ title, style }: Props) {
 
   console.log('childFontSize:', childFontSize);
 
+  const calculateTransform = (size: number) => {
+    if (size === 20) {
+      return 'translate(-15%, -5%)';
+    }
+    if (size === 16) {
+      return 'translate(-32%, -4%)';
+    }
+
+    // 다른 크기일 경우 기본 계산식 적용
+    const baseTransformX = -15;
+    const baseTransformY = -5;
+
+    const transformX = baseTransformX * (size / 20);
+    const transformY = baseTransformY * (size / 20);
+
+    return `translate(${transformX}%, ${transformY}%)`;
+  };
+
   return (
     <div ref={childRef}>
       <div>{title}</div>
