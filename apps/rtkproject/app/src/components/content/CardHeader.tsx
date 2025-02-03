@@ -61,8 +61,33 @@ export default function CardHeader({ title, style }: Props) {
   };
 
   return (
-    <div ref={childRef}>
-      <div>{title}</div>
+    <div style={{ position: 'relative', paddingLeft: calculatePadding(childFontSize), paddingTop: '5px' }}>
+      <div
+        ref={childRef}
+        style={{
+          color: '#1d1f22',
+          letterSpacing: '-0.5px',
+          position: 'relative',
+          top: 0,
+          left: 0,
+          zIndex: '3',
+          ...style,
+        }}
+      >
+        {title}
+      </div>
+      <span
+        style={{
+          width: childFontSize,
+          height: childFontSize,
+          background: 'var(--color-yellow-positive)',
+          borderRadius: '9999px',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: '0',
+        }}
+      />
     </div>
   );
 }
