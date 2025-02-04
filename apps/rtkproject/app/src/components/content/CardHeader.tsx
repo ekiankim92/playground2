@@ -60,6 +60,9 @@ export default function CardHeader({ title, style }: Props) {
     return `${Math.round(padding)}px`;
   };
 
+  console.log('calculatePadding:', calculatePadding);
+  console.log('calculatePadding:', calculatePadding(24));
+
   return (
     <div style={{ position: 'relative', paddingLeft: calculatePadding(childFontSize), paddingTop: '5px' }}>
       <div
