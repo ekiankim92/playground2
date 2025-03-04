@@ -1,0 +1,110 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 전역 스타일 정의 */
+:root {
+  /* Colors */
+  --color-yellow-positive: #ffbc00;
+  --color-yellow-negative: #ffcc00;
+  --color-gray: #60584c;
+  --color-dark-gray: #545045;
+  --color-gold: #8d744b;
+  --color-silver: #84888b;
+  --color-slogan-warm-gray: #c7bbad;
+
+  /* 폰트 패밀리 변수 */
+  --font-display: 'KBFGDisplay', sans-serif;
+  --font-text: 'KBFGText', sans-serif;
+
+  /* gray */
+  --g0: #ffffff;
+  --g10: #e1e2e3;
+  --g25: #b4b4b4;
+  --g55: #7b7b7b;
+  --g75: #474747;
+  --g90: #1f1f1f;
+
+  /* background */
+  --normal: #ffffff;
+  --depth1: #f4f4f4;
+  --depth2: #e7e8e9;
+  --kb-gray: #e4ddd7;
+  --kb-gray-dark: #dcd3db;
+  --kb-yellow-light: #fef9ec;
+
+  /* kb */
+  --yellow-main: #ffb800;
+  --yellow-light: #ffc533;
+  --gray: #716051;
+  --dark-gray: #4a483e;
+  --gold: #866737;
+  --silver: #848687;
+}
+
+* {
+  font-family: var(--font-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  letter-spacing: -0.5px;
+}
+
+/* Display 폰트 유틸리티 클래스 */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Text 폰트 유틸리티 클래스 */
+.font-text {
+  font-family: var(--font-text);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: inherit !important;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 스크롤바 전체 스타일 */
+::-webkit-scrollbar {
+  width: 12px; /* 세로 스크롤바 너비 */
+  height: 12px; /* 가로 스크롤바 높이 */
+}
+
+/* 스크롤바 트랙(배경) */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: unset;
+}
+
+/* 세로 스크롤바 핸들 */
+::-webkit-scrollbar-thumb:vertical {
+  background: var(--g55);
+  border-radius: 9999px;
+  background-clip: padding-box;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+/* 가로 스크롤바 핸들 */
+::-webkit-scrollbar-thumb:horizontal {
+  background: var(--g55);
+  border-radius: 9999px;
+  background-clip: padding-box;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+/* 바운딩 제거 */
+body {
+  overflow: hidden;
+  height: 100vh;
+  padding-right: 15px;
+}
