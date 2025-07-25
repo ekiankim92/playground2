@@ -2,9 +2,11 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
+import { Props } from '..';
 
-function ComponentB() {
+function ComponentB(props: Props) {
   console.log('this is component B rendering');
+  console.log('component b props:', props);
 
   return (
     <Wrapper>

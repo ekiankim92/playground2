@@ -1,43 +1,52 @@
 'use client';
 
-import { useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import ComponentA from './_components/compoentA';
 import ComponentB from './_components/componentB';
 import styled from '@emotion/styled';
+import axios from 'axios';
 
-const TABS = [
+export type Props = {
+  role: string;
+  isActive: boolean;
+};
+
+const TABS: Array<{ name: string; key: string; content: React.ReactElement }> = [
   {
     name: 'a',
     key: 'a',
+    content: React.createElement(ComponentA),
   },
   {
     name: 'b',
     key: 'b',
+    content: React.createElement(ComponentB),
   },
 ];
 
 export default function CloneElement() {
-  const [tab, setTab] = useState('a');
+  const [userData, setUserData] = useState([]);
 
-  const onClickTabA = () => {
-    setTab('a');
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios.get('https://jsonplaceholder.typicode.com/users').then((res) => {
+        setUserData(res.data);
+      });
+    };
 
-  const onClickTabB = () => {
-    setTab('B');
-  };
+    fetchData();
+  }, []);
 
   return (
     <div>
       <div>This is CloneElement</div>
-      <Wrapper>
-        <Box onClick={onClickTabA}>Component A</Box>
-        <Box onClick={onClickTabB}>Component B</Box>
-      </Wrapper>
-      {/* {tab === 'a' ? <ComponentA /> : <ComponentB />} */}
-
-      <ComponentA />
-      <ComponentB />
+      {TABS.map((el) =>
+        React.cloneElement(el.content, {
+          role: 'user',
+          isActive: el.key === 'a' ? true : false,
+          userData: el.key === 'a' ? userData : null,
+        }),
+      )}
     </div>
   );
 }

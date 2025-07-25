@@ -2,9 +2,13 @@
 
 import React from 'react';
 import styled from '@emotion/styled';
+import { Props } from '..';
 
-function ComponentA() {
+function ComponentA(props: Props) {
   console.log('this is component A rendering!');
+  // console.log('component a role:', role);
+  // console.log('component a isAcitve:', isActive);
+  console.log('component a props:', props);
 
   return (
     <Wrapper>
