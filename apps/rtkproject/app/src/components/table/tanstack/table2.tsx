@@ -71,6 +71,7 @@ export default function SaaSPage({ columnLen = 6 }) {
           cell: (info) => info.getValue(),
           footer: (props) => props.column.id,
           size: FIXED_COLUMN_SIZE.firstName,
+          meta: { filterVariant: 'text', customInput: 366 },
         }),
         columnHelper.accessor((row) => row.lastName, {
           id: 'lastName',

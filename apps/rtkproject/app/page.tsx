@@ -12,7 +12,7 @@ export default function Home() {
       {/* <div>HELLO WORLD!</div> */}
       {/* <StaticTable /> */}
       {/* <CloneElement /> */}
-      <DataFlowPage />
+      {/* <DataFlowPage /> */}
       <SaaSPage />
     </>
   );
