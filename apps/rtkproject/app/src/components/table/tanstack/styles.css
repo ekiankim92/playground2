@@ -3,6 +3,7 @@ table,
   /* border: 1px solid lightgray; */
   /* width: fit-content; */
   width: 100%;
+  border-collapse: collapse;
 }
 
 .tr {

@@ -1,7 +1,7 @@
 'use client';
 
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './styles.css';
 
 type Person = {
@@ -48,6 +48,9 @@ const FIXED_COLUMN_SIZE = {
 export default function SaaSPage({ columnLen = 6 }) {
   const columnHelper = createColumnHelper<Person>();
   const [colWidth, setColWidth] = useState(0);
+  const [columnSizing, setColumnSizing] = useState({});
+  const [columnSizingInfo, setColumnSizingInfo] = useState({});
+  const previousIsResizingRef = useRef(null);
 
   //   const FIXED_COLUMN_SIZE = {
   //     firstName: 80,
@@ -112,12 +115,31 @@ export default function SaaSPage({ columnLen = 6 }) {
 
   const [data, _setData] = useState(() => [...defaultData]);
 
+  const handleColumnSizingInfoChange = (info) => {
+    const wasResizing = previousIsResizingRef.current;
+    const isResizing = info.isResizingColumn;
+
+    if (wasResizing && !isResizing) {
+      saveColumnSizing(columnSizing);
+    }
+
+    previousIsResizingRef.current = isResizing;
+    setColumnSizingInfo(info);
+  };
+  ``;
+
   const table = useReactTable({
     data,
     columns,
+    state: {
+      columnSizing,
+      columnSizingInfo,
+    },
     getCoreRowModel: getCoreRowModel(),
     enableColumnResizing: true,
-    columnResizeMode: 'onChange', // or 'onEnd' depending on preference
+    columnResizeMode: 'onEnd', // or 'onEnd' depending on preference
+    onColumnSizingChange: setColumnSizing,
+    onColumnSizingInfoChange: handleColumnSizingInfoChange,
   });
 
   useEffect(() => {
