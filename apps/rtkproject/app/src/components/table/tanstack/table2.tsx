@@ -117,7 +117,7 @@ export default function SaaSPage({ columnLen = 6 }) {
 
   const handleColumnSizingInfoChange = (info) => {
     const wasResizing = previousIsResizingRef.current;
-    const isResizing = info.isResizingColumn;
+    const isResizing = info?.isResizingColumn;
 
     if (wasResizing && !isResizing) {
       saveColumnSizing(columnSizing);
@@ -126,7 +126,6 @@ export default function SaaSPage({ columnLen = 6 }) {
     previousIsResizingRef.current = isResizing;
     setColumnSizingInfo(info);
   };
-  ``;
 
   const table = useReactTable({
     data,
@@ -137,7 +136,7 @@ export default function SaaSPage({ columnLen = 6 }) {
     },
     getCoreRowModel: getCoreRowModel(),
     enableColumnResizing: true,
-    columnResizeMode: 'onEnd', // or 'onEnd' depending on preference
+    columnResizeMode: 'onChange',
     onColumnSizingChange: setColumnSizing,
     onColumnSizingInfoChange: handleColumnSizingInfoChange,
   });
