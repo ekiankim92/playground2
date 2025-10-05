@@ -1,7 +1,7 @@
 'use client';
 
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, ChangeEvent } from 'react';
 import './styles.css';
 
 type Person = {
@@ -152,6 +152,19 @@ export default function SaaSPage({ columnLen = 6 }) {
     setColWidth(calcuateWidth / (columnLength - fixedValue.length));
   }, [table]);
 
+  const [inputs, setInputs] = useState({
+    name: '',
+    model: '',
+    color: '',
+  });
+
+  const onChangeInputs = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputs({
+      ...inputs,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <div className='p-2'>
       {colWidth && (
@@ -214,6 +227,9 @@ export default function SaaSPage({ columnLen = 6 }) {
         </table>
       )}
       <div className='h-4' />
+      {['name', 'model', 'color'].map((el, index) => (
+        <input key={index} name={el} onChange={onChangeInputs} />
+      ))}
     </div>
   );
 }
